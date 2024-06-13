@@ -1,0 +1,75 @@
+Gramatica:
+
+axioma : programa
+
+programa : declarações corpo
+
+declarações     : declarações declaração 
+                |
+
+declaração      : tipo seqDecl ';'
+                |
+
+seqDecl         : atr ',' seqDecl
+                | atr 
+
+atr            : VAR 
+                | VAR '[' NUMINT ']'
+		| VAR '[' NUMINT ']' '=' '{' seqNumInt '}'
+                | VAR '[' NUMINT ']' '[' NUMINT ']'
+                | VAR '[' NUMINT ']' '[' NUMINT ']' '=' '{' seqNumInt '}'
+                | VAR '=' operacaoInt
+                | VAR '=' PAL 
+		| VAR '=' bool
+
+seqNumInt : NUMINT ',' seqNumInt
+	    | NUMINT
+
+corpo : corpo instrucao
+
+instrucao   : ifelsestatement 
+	    | print ';' 
+            | VAR '=' operacao ';' 
+            | VAR '(' NUMINT ')' '=' operacao';' 
+            | VAR '(' NUMINT ')' '(' NUMINT ')' '=' operacao ';' 
+            | tojump ';' 
+            | jumpto ';'
+
+operacao : termo
+            | operacao '+' termo
+            | operacao '-' termo
+
+termo  :  fator
+           | termo  '*'  fator
+           | termo '/'   fator
+
+fator  :  NUMINT
+            | VAR 
+            | VAR '(' NUMINT ')' 
+            | VAR '(' NUMINT ')' '(' NUMINT ')' 
+            | bool
+            | PAL
+            | NOT '(' condição ')'
+            | LER '(' ')'
+
+ifelsestatement : IF '(' condição ')' '{' corpo '}' ELSE '{' corpo '}' 
+
+condição    : operacao
+           | operacao '=='  operacao
+           | operacao '!='  operacao
+           | operacao '<='  operacao
+           | operacao '>='  operacao
+           | operacao '<'  operacao  
+           | operacao '>'   operacao
+           | '(' condicao ')' 'AND' '(' condicao ')'
+           | '(' condicao ')' 'OR' '(' condicao ')'                  
+
+print :   PRINT '(' condição ')'
+
+tojump: MARK '{' corpo '}' IF '(' condição ')' JUMP
+
+jumpto: MARK IF '(' condição ')' '{' corpo '}' JUMP
+
+tipo    : INT | STRING | BOOL | ARRAY 
+
+bool    : TRUE | FALSE

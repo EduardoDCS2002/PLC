@@ -1,0 +1,15 @@
+INT i;
+ARRAY ar[4];
+STRING nL = "\n";
+PRINT("Array antes das insercoes: \n");
+PRINT(ar(0));PRINT(ar(1));PRINT(ar(2));PRINT(ar(3));
+PRINT(nL);
+MARK IF (i<4) {
+    i = i + 1;
+} JUMP;
+ar(0) = i;
+ar(1) = i;
+ar(2) = i;
+ar(3) = i;
+PRINT("Array depois das insercoes: \n");
+PRINT(ar(0));PRINT(ar(1));PRINT(ar(2));PRINT(ar(3));

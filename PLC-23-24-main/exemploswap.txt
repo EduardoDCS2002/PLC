@@ -1,0 +1,9 @@
+INT x = 10,y = 5,temp;
+
+temp = y;
+y = x;
+x = temp;
+
+PRINT("x = "); PRINT(x);
+PRINT("\n");
+PRINT("y = "); PRINT(y);

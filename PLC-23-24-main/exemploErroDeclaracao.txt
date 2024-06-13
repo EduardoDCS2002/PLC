@@ -1,0 +1,7 @@
+INT x = 3;
+INT y = 2;
+INT x;
+
+x = x + y;
+
+PRINT(x);

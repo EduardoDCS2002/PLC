@@ -1,0 +1,5 @@
+INT x = 0;
+STRING s = "Ola Mundo!";
+IF((x==0) AND ((x<1) OR (x>1))){
+    PRINT(s);
+} 

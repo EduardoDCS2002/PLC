@@ -1,0 +1,43 @@
+ARRAY matrizAdj[5][5];
+
+matrizAdj(0)(1) = 1;
+matrizAdj(1)(2) = 1;
+matrizAdj(3)(4) = 1;
+matrizAdj(4)(0) = 1;
+matrizAdj(0)(2) = 1;
+
+??Print da primeira linha??
+PRINT(matrizAdj(0)(0)); PRINT (" ");
+PRINT(matrizAdj(0)(1)); PRINT (" ");
+PRINT(matrizAdj(0)(2)); PRINT (" ");
+PRINT(matrizAdj(0)(3)); PRINT (" ");
+PRINT(matrizAdj(0)(4)); PRINT (" ");
+PRINT("\n");
+??Print da segunda linha??
+PRINT(matrizAdj(1)(0)); PRINT (" ");
+PRINT(matrizAdj(1)(1)); PRINT (" ");
+PRINT(matrizAdj(1)(2)); PRINT (" ");
+PRINT(matrizAdj(1)(3)); PRINT (" ");
+PRINT(matrizAdj(1)(4)); PRINT (" ");
+PRINT("\n");
+??Print da terceira linha??
+PRINT(matrizAdj(2)(0)); PRINT (" ");
+PRINT(matrizAdj(2)(1)); PRINT (" ");
+PRINT(matrizAdj(2)(2)); PRINT (" ");
+PRINT(matrizAdj(2)(3)); PRINT (" ");
+PRINT(matrizAdj(2)(4)); PRINT (" ");
+PRINT("\n");
+??Print da quarta linha??
+PRINT(matrizAdj(3)(0)); PRINT (" ");
+PRINT(matrizAdj(3)(1)); PRINT (" ");
+PRINT(matrizAdj(3)(2)); PRINT (" ");
+PRINT(matrizAdj(3)(3)); PRINT (" ");
+PRINT(matrizAdj(3)(4)); PRINT (" ");
+PRINT("\n");
+??Print da quinta linha??
+PRINT(matrizAdj(4)(0)); PRINT (" ");
+PRINT(matrizAdj(4)(1)); PRINT (" ");
+PRINT(matrizAdj(4)(2)); PRINT (" ");
+PRINT(matrizAdj(4)(3)); PRINT (" ");
+PRINT(matrizAdj(4)(4)); PRINT (" ");
+PRINT("\n");

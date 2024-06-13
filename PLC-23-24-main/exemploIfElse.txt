@@ -1,0 +1,13 @@
+BOOL b = TRUE;
+INT x = 10;
+
+IF (b){
+    x = 5;
+    b = FALSE;
+}
+ELSE{
+    x = 20;
+}
+PRINT("x = "); PRINT(x);
+PRINT("\n");
+PRINT("b = "); PRINT(b);

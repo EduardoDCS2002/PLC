@@ -1,0 +1,10 @@
+INT numero = LER();
+IF (numero >= 0) {
+    IF(numero == 0) {
+        PRINT("O numero inserido e zero.\n");
+    }ELSE{
+        PRINT("O numero inserido e positivo.\n");
+    }
+}ELSE{
+    PRINT("O numero inserido e negativo.\n");
+}
